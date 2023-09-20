@@ -10,7 +10,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter layout demo',
-        home: StartPage());
+        title: "Flutter app",
+        home: StartPage(),
+    );
   }
 }

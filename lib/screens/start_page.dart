@@ -5,8 +5,7 @@ class StartPage extends StatelessWidget {
   const StartPage({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return  Scaffold(
         body: Padding(
           padding: const EdgeInsets.only(top: 170.0, left: 20, right: 20),
           child: Center(
@@ -21,15 +20,15 @@ class StartPage extends StatelessWidget {
                         color: Colors.deepPurple)),
               ),
               Padding(
-                padding: const EdgeInsets.all(4.0),
-                child: Image.asset("assets/images/logo.png"),
+                padding: const EdgeInsets.symmetric(horizontal: 4.0,vertical: 30),
+                child: Image.asset("assets/images/picture1.png"),
               ),
               const Padding(
                 padding: EdgeInsets.all(10.0),
                 child: Text(
                     "This is an app to edit a photo of your choice with filter of my choice ;)",
-                    style: TextStyle(
-                        fontFamily: 'Familjen ',fontSize: 15, color: Colors.deepPurpleAccent)),
+                   textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.deepPurpleAccent,)),
               ),
                Padding(
                   padding: const EdgeInsets.all(20.0),
@@ -41,18 +40,23 @@ class StartPage extends StatelessWidget {
                         );
                       },
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white38,
-                        shadowColor: Colors.black
+                        backgroundColor: Colors.deepPurpleAccent,
+                        shadowColor: Colors.black,
+                        textStyle: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20)
                     ),
-                    child: const Text('Lets Get Started',
-                        style: TextStyle(
-                            fontSize: 15, color: Colors.deepPurpleAccent)),
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('Lets Get Started'),
+                        Icon(Icons.arrow_forward, color: Colors.white,),
+                      ],
+                    ),
                   )
                ),
             ]),
           ),
         ),
-      ),
+
     );
   }
 }
